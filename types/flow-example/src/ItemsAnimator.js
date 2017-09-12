@@ -50,6 +50,7 @@ const itemsAnimator = ({ styles, animStyles }) =>
             x={style.x}
             y={style.y}
             borderK={style.borderK}
+            otherProp="foobar"
           />
         )}
       </div>}

@@ -24,10 +24,12 @@ type ItemProps = {
   hoveredColor?: string,
 }
 
-const item = ({ title, componentDynamicStyle, styles, borders }) =>
+type FinalProps = ItemProps & { otherProp: string };
+
+const item = ({ title, componentDynamicStyle, styles, borders, otherProp }) =>
   <div {...styles.component} style={componentDynamicStyle}>
     <div {...styles.title}>
-      {title}
+      {title} - {otherProp}
     </div>
     {borders.map(({ style, id }) =>
       <div key={id} style={style} {...styles.border} />
